@@ -9,7 +9,15 @@ import os
 
 class Rossman( object ):
     def __init__( self ):
+<<<<<<< HEAD
         self.home_path = ''
+=======
+        # Obtém o diretório do script atual
+        current_dir = os.path.dirname(os.path.realpath(__file__))
+        # Constrói o caminho relativo aos parâmetros
+        self.home_path = os.path.join(current_dir, '/eduardo_paiva/CDS\projects/dsemproducao/' )
+        self.home_path = '/home/eduardo_paiva/CDS/projects/dsemproducao/'
+>>>>>>> b2519da3a913878331be6cad8ed7c00cb54359cf
         self.competition_distance_scaler = pickle.load(open(self.home_path + '/parameter/competition_distance_scaler.pkl', 'rb'))
         self.competition_time_month_scaler = pickle.load(open(self.home_path + '/parameter/competition_time_month_scaler.pkl', 'rb'))
         self.promo_time_week_scaler = pickle.load(open(self.home_path + '/parameter/promo_time_week_scaler.pkl', 'rb'))
